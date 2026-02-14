@@ -4,8 +4,17 @@ import { FaArrowRight } from "react-icons/fa6";
 import { FaLock } from "react-icons/fa6";
 import { MdOutlinePersonOutline } from "react-icons/md";
 import { MdAirplaneTicket } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+import type React from "react";
 
 export default function Login() {
+  const navigate = useNavigate();
+
+  const toPass = (e: React.FormEvent) => {
+    e.preventDefault();
+    navigate("/AirPass/BoardingPass");
+  };
+
   return (
     <div className="login">
       <div className="header">
@@ -20,18 +29,14 @@ export default function Login() {
       </div>
       <div className="container">
         <div className="body">
-          <form action="">
+          <form onSubmit={toPass}>
             <div className="inp">
               <label htmlFor="" className="inputLabel">
                 FULL LEGAL NAME
               </label>
               <div className="helper">
                 <MdOutlinePersonOutline className="formIcon" />
-                <input
-                  placeholder="Zbuce Andrei"
-                  type="text"
-                  className="input"
-                />
+                <input placeholder="Laza Lukas" type="text" className="input" />
               </div>
             </div>
             <div className="inp">

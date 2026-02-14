@@ -7,6 +7,7 @@ import {
 import "./App.css";
 import Login from "./Pages/LoginPage/Login";
 import NavBar from "./Components/NavBar/NavBar";
+import BoardingPass from "./Pages/LoginPage/BoardingPass/BoardingPass";
 
 function LayOut() {
   return (
@@ -33,6 +34,10 @@ function App() {
         {
           path: "Login",
           element: <Login />,
+        },
+        {
+          path: "BoardingPass",
+          element: <BoardingPass />,
         },
       ],
     },
