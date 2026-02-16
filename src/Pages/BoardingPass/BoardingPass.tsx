@@ -34,7 +34,7 @@ export default function BoardingPass() {
               </div>
             </div>
             <div className="location">
-              <h1 className="cutNamed">BUC</h1>
+              <h1 className="cutNamed">OTP</h1>
               <p className="fullName">Bucharest</p>
             </div>
           </div>
@@ -55,7 +55,7 @@ export default function BoardingPass() {
         </div>
         <div className="mainPass">
           <div className="names">
-            <p className="status">PASSANGER</p>
+            <p className="status">PASSENGER</p>
             <h2 className="name">Laza Lukas</h2>
           </div>
           <div className="code">

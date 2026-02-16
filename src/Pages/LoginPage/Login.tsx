@@ -10,9 +10,14 @@ import type React from "react";
 export default function Login() {
   const navigate = useNavigate();
 
-  const toPass = (e: React.FormEvent) => {
+  // const toPass = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   navigate("/AeroID/BoardingPass");
+  // };
+
+  const toScanner = (e: React.FormEvent) => {
     e.preventDefault();
-    navigate("/AirPass/BoardingPass");
+    navigate("/AeroID/Scanner");
   };
 
   return (
@@ -29,7 +34,7 @@ export default function Login() {
       </div>
       <div className="container">
         <div className="body">
-          <form onSubmit={toPass}>
+          <form onSubmit={toScanner}>
             <div className="inp">
               <label htmlFor="" className="inputLabel">
                 FULL LEGAL NAME

@@ -7,7 +7,8 @@ import {
 import "./App.css";
 import Login from "./Pages/LoginPage/Login";
 import NavBar from "./Components/NavBar/NavBar";
-import BoardingPass from "./Pages/LoginPage/BoardingPass/BoardingPass";
+import BoardingPass from "./Pages/BoardingPass/BoardingPass";
+import Scanner from "./Pages/ScanningPage/Scanner";
 
 function LayOut() {
   return (
@@ -22,14 +23,14 @@ function LayOut() {
 
 function App() {
   const router = createBrowserRouter([
-    { path: "", loader: () => redirect("/AirPass") },
+    { path: "", loader: () => redirect("/AeroID") },
     {
-      path: "/AirPass",
+      path: "/AeroID",
       element: <LayOut />,
       children: [
         {
           path: "",
-          loader: () => redirect("/AirPass/Login"),
+          loader: () => redirect("/AeroID/Login"),
         },
         {
           path: "Login",
@@ -38,6 +39,10 @@ function App() {
         {
           path: "BoardingPass",
           element: <BoardingPass />,
+        },
+        {
+          path: "Scanner",
+          element: <Scanner />,
         },
       ],
     },

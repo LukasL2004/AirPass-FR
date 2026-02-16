@@ -40,7 +40,7 @@
   max-width: 400px;
   height: auto;
   padding: 2rem;
-  box-shadow: 0 0 10px rgb(0, 122, 255, 0.3);
+  box-shadow: 0 0 20px rgb(0, 122, 255, 0.3);
   border-radius: 30px;
 }
 .date {
@@ -161,4 +161,7 @@ h2 {
 }
 
 @media screen and (max-width: 500px) {
+  .passContainer {
+    width: 75%;
+  }
 }

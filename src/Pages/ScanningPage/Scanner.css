@@ -1,0 +1,167 @@
+.scanner {
+  background-color: #050506;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scannerHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hdElement {
+  background-color: #191919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  border: 2px solid #292929;
+}
+
+.closeBtn {
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.scanState {
+  gap: 0.4rem;
+  border-radius: 30px;
+  padding: 0.5rem;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  height: max-content;
+}
+
+.revCamera {
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.scannerMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88vh;
+}
+
+.videoContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #004080;
+  height: 60%;
+  width: 25%;
+  min-width: 300px;
+  min-height: 500px;
+  box-shadow: 0 0 20px #004080;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Umple tot spațiul fără să deformeze, taie marginile dacă e nevoie */
+  display: block; /* Elimină spațiile goale de sub video */
+}
+
+.videoContainer::after {
+  content: "";
+  position: absolute;
+  height: 0.5%;
+  width: 100%;
+  background-color: green;
+  z-index: 10;
+  box-shadow: 0 0 15px green;
+  top: 5%;
+  animation: scan 4s infinite ease-in-out alternate;
+  z-index: 9;
+}
+
+@keyframes scan {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+.face {
+  position: absolute;
+  width: 90%;
+  height: 75%;
+  min-height: 330px;
+  border: 5px dashed #191919;
+  border-radius: 100%;
+}
+
+.scannerFooter {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: #141414;
+  opacity: 0.9;
+  height: 40%;
+  width: 30%;
+  min-width: 400px;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 30px;
+  z-index: 10;
+}
+
+.line {
+  border: 2px solid #333435;
+  margin-top: 1rem;
+  width: 10%;
+  padding: 0.05rem;
+  background-color: #333435;
+  border-radius: 30px;
+}
+
+.footerImg {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 100%;
+  font-size: 2.5rem;
+  border: 2px solid #004080;
+}
+
+.footerCredentials {
+  display: flex;
+  gap: 2rem;
+  letter-spacing: 0.06rem;
+  color: #5b5b5c;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  .screen {
+    min-height: 500px;
+  }
+  .face {
+    min-height: 350px;
+  }
+}
