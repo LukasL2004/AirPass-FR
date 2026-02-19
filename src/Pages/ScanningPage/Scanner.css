@@ -84,11 +84,11 @@
 .videoContainer::after {
   content: "";
   position: absolute;
-  height: 0.5%;
+  height: 2px;
   width: 100%;
-  background-color: green;
+  background-color: #4090e1;
   z-index: 10;
-  box-shadow: 0 0 15px green;
+  box-shadow: 0 0 15px #599fe6;
   top: 5%;
   animation: scan 4s infinite ease-in-out alternate;
   z-index: 9;
@@ -110,6 +110,7 @@
   min-height: 330px;
   border: 5px dashed #191919;
   border-radius: 100%;
+  box-shadow: 0 0 9999px #000000;
 }
 
 .scannerFooter {
